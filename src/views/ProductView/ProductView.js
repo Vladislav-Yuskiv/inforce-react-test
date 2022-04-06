@@ -23,7 +23,7 @@ export default function ProductView ( ) {
         <h1>Тут повинна бути логіка редагування {clickedProduct.name}</h1>
         <img src={clickedProduct.imageUrl} alt={clickedProduct.name}/>
 
-       
+       <button>Edit product  {clickedProduct.name}</button>
         </>
     )
 }

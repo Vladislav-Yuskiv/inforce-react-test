@@ -28,6 +28,20 @@
         ""
       ],
       "id": 2
+    },
+    {
+      "imageUrl": "https://i.ibb.co/w6HsGMN/Potato.webp",
+      "name": "Potato",
+      "count": "07",
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "100g",
+      "comments": [
+        ""
+      ],
+      "id": 3
     }
   ]
 }
