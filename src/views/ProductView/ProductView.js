@@ -1,20 +1,27 @@
-import { useEffect } from "react"
-import { useSelector , useDispatch } from 'react-redux';
-import { getProducts } from '../../redux/products/product-selector'
+import { useEffect, useState } from "react"
+import { useParams, useRouteMatch} from 'react-router-dom';
 
-export default function ProductView ({productId}) {
 
-    const products = useSelector(getProducts)
+export default function ProductView ( ) {
 
+    const { productId } = useParams();
+    const [clickedProduct , setClickedProduct] = useState({})
 
   useEffect(()=>{
-  const clickedProduct =  products.filter(product => product.id = productId)
+  
+  fetch(`http://localhost:3010/products/${productId}`).then(res => res.json()).then(result => {
+    setClickedProduct(result)
+    
   })
+} , [ productId])
+
+  console.log(clickedProduct);
 
     return(
         <>
 
-        <h1>Тут повинна бути логіка редагування кожного продукту</h1>
+        <h1>Тут повинна бути логіка редагування {clickedProduct.name}</h1>
+        <img src={clickedProduct.imageUrl} alt={clickedProduct.name}/>
 
        
         </>

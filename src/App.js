@@ -11,7 +11,7 @@ function App() {
   const [ loading , setLoading] = useState(false) ;
 
   const dispatch = useDispatch();
-
+  const products = useSelector(getProducts)
   useEffect(()=>{
     setLoading(true)
     fetch("http://localhost:3010/products" , {
@@ -22,9 +22,9 @@ function App() {
       dispatch(productActions.allProducts(result))
     }).catch(console.log);
 
-  } , [ loading , dispatch])
+  } , [ products])
 
-  const products = useSelector(getProducts)
+
 
   return (
     <div className="App">
