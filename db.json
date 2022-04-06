@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "https://i.ibb.co/VMy758q/Tomato.jpg",
+      "name": "Tomato",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "Fresh",
+        "Inexpensive"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.productList{
+    display: flex;
+    list-style: none;
+
+}
+.productItem{
+    background-color: rgb(116, 150, 200);
+    margin: 20px;
+    padding: 5px;
+}
+.name{
+    font-weight: 400;
+    font-size: 18px;
+    
+}

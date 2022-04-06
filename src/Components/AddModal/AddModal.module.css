@@ -1,0 +1,60 @@
+.Modal {
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    right: 50px;
+    bottom: 70px;
+    background-color: white;
+    padding: 20px;
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(103, 103, 103 , 0.5);
+  }
+ label{
+   display: block;
+   margin: 15px;
+   font-weight: bold;
+   
+ }
+  .submit{
+    border:  none;
+    color: black;
+    background-color: turquoise;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px;
+    height: 30px;
+  }
+  h2{
+    text-align: center;
+  }
+  .form{
+    text-align: center;
+  }
+  .addButton{
+    border: none;
+    width: 200px;
+    height: 35px;
+    color: black;
+    background-color: turquoise;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 30px;
+  }
+  .cancel{
+    text-align: center;
+    border: none;
+    width: 200px;
+    height: 35px;
+    color: black;
+    background-color: rgb(186, 50, 5);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 30px;
+  }
