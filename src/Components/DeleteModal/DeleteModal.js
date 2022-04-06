@@ -1,6 +1,7 @@
 import React , {useState} from "react"
 import s from './DeleteModal.module.css'
 import Modal from 'react-modal';
+import {fetchDeleteProduct} from '../../service/products-services'
 
 
 Modal.setAppElement('#root');
@@ -18,13 +19,10 @@ export default function DeleteButton ({ id }) {
 
     const deleteProduct = () => {
        
-        fetch('http://localhost:3010/products/' + id, {
-            method: 'DELETE',
-          })
+        fetchDeleteProduct(id)
+        closeModal()
 
-          closeModal()
-
-        }
+    }
 
     return (
         <>

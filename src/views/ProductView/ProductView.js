@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, useRouteMatch} from 'react-router-dom';
+import { fetchProductById } from '../../service/products-services'
 
 
 export default function ProductView ( ) {
@@ -9,7 +10,7 @@ export default function ProductView ( ) {
 
   useEffect(()=>{
   
-  fetch(`http://localhost:3010/products/${productId}`).then(res => res.json()).then(result => {
+    fetchProductById(productId).then(result => {
     setClickedProduct(result)
     
   })

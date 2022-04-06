@@ -1,6 +1,7 @@
 import React , {useState} from "react"
 import s from './AddModal.module.css'
 import Modal from 'react-modal';
+import {fetchPostProduct} from '../../service/products-services'
 
 Modal.setAppElement('#root');
 
@@ -65,15 +66,11 @@ export default function AddButton () {
             comments : [commentText]
             
         }
-        fetch('http://localhost:3010/products', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(product)
-          });
+        fetchPostProduct(product)
         console.log(JSON.stringify(product));
 
-          closeModal()
-          reset()
+        closeModal()
+        reset()
       }
 
       const reset = () => {
