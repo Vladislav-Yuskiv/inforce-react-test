@@ -5,6 +5,7 @@ import {fetchPostProduct} from '../../service/products-services'
 
 Modal.setAppElement('#root');
 
+//Можна трошки переробити компонент і використовувати також для редагування
 
 export default function AddButton () {
     const [modalIsOpen, setIsOpen] = useState(false);
